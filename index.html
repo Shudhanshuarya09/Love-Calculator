@@ -11,26 +11,27 @@
     .background {
         background-image: url(/Image/wallpaper.jpg);
         background-repeat: no-repeat;
-        background-size: 550px;
-        /* object-fit: contain; */
+        background-size: 1300px;
+        object-fit: contain;
         background-attachment: fixed;
-        height: 2000px;
-        width: 1600px;
+        height: 1600px;
+        width: 1200;
         background-position-x: center;
         backface-visibility: hidden;
     }
 </style>
 
-<body>
+<body class="background grow p-0 m-0">
     <!--Section 1-->
+    <!-- <div style="background-image: url(/Image/wallpaper\ 3.jpg); width: 550px; height: 500px; background-size: cover;"></div> -->
     <div class="bg-pink-300">
         <div class="bg-pink-700 border-solid border-black flex justify-center space-x-3">
-            <div class="w-24">
-                <img src="/Image/heart 2.png" alt="">
+            <div class="w-36 ">
+                <img src="/Image/3d heart2.webp" alt="">
             </div>
-            <h4 class="text-5xl font-extrabold p-4 text-pink-200 shadow-2xl">Love Calculator</h4>
-            <div class="w-24">
-                <img src="/Image/heart 2.png" alt="">
+            <h4 class="text-5xl font-extrabold pt-8 tracking-wider text-pink-200 shadow-2xl p-3">Love Calculator</h4>
+            <div class="w-36">
+                <img src="/Image/3d heart2.webp" alt="">
             </div>
         </div>
         <!--Section 2-->
@@ -38,7 +39,7 @@
             <div>
                 <p class="font-bold text-5xl p-5 text-pink-800">Your Name</p>
                 <span class="px-6"><input name="Your Name" id="meName"
-                        class="p-2 rounded-lg text-center font-bold text-lg tracking-wider"></span>
+                        class="p-2 rounded-lg text-center font-bold text-lg tracking-wider" required></span>
             </div>
             <div class="w-48 h-44 justify-center p-5">
                 <img src="/Image/heart3.png" alt="">
@@ -61,7 +62,16 @@
         <br>
         <hr class="bg-pink-200 h-1 ">
     </div>
-    <img src=" alt=" class="background">
+    
+    <!--Section-3-->
+    <p class="pt-10 px-5 text-2xl text-white font-normal tracking-wider italic">Love is the highest expression of world. Divine love translates into love of all. Love is expressed by human beings for each other. Parents love their children. Next to God there is none other like father or like mother, it is said. Parents love their children without any expectation.</p>
+    <br>
+    <br>
+    <p class="pt-10 px-5 text-2xl text-purple-400 decoration-2 shadow-black font-semibold tracking-wider italic">Love brings about peace, harmony and joy between individuals. Love is a positive and healthy attitude. When love governs an interaction or a relationship there is no place for negative qualities such as jealousy, greed, violence and anger.</p>
+    <br>
+    <br>
+    <p class="pt-10 px-5 text-2xl text-white font-normal tracking-wider italic">“You know you're in love when you can't fall asleep because reality is finally better than your dreams.”</p>
+    <img  class="background">
     <!--Java Script-->
     <script>
         function calculateLove() {
