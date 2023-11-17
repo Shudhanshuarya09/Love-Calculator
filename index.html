@@ -1,58 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<!-- <style>
+<style>
     .background {
-        background-image: url(../image/ammmbelem.jpg);
+        background-image: url(/Image/wallpaper.jpg);
         background-repeat: no-repeat;
         background-size: 550px;
-        object-fit: contain;
+        /* object-fit: contain; */
         background-attachment: fixed;
-        height: 1600px;
-        width: 1200px;
+        height: 2000px;
+        width: 1600px;
         background-position-x: center;
         backface-visibility: hidden;
     }
-</style> -->
-<body class="bg-pink-300">
+</style>
+
+<body>
     <!--Section 1-->
-    <div class="bg-pink-700 border-solid border-black flex justify-center space-x-3">
-        <div class="w-24">
-        <img src="/Image/heart 2.png" alt="">
+    <div class="bg-pink-300">
+        <div class="bg-pink-700 border-solid border-black flex justify-center space-x-3">
+            <div class="w-24">
+                <img src="/Image/heart 2.png" alt="">
+            </div>
+            <h4 class="text-5xl font-extrabold p-4 text-pink-200 shadow-2xl">Love Calculator</h4>
+            <div class="w-24">
+                <img src="/Image/heart 2.png" alt="">
+            </div>
         </div>
-        <h4 class="text-5xl font-extrabold p-4 text-pink-200 shadow-2xl">Love Calculator</h4>
-        <div class="w-24">
-            <img src="/Image/heart 2.png" alt="">
+        <!--Section 2-->
+        <div class="pt-12 flex justify-center">
+            <div>
+                <p class="font-bold text-5xl p-5 text-pink-800">Your Name</p>
+                <span class="px-6"><input name="Your Name" id="meName"
+                        class="p-2 rounded-lg text-center font-bold text-lg tracking-wider"></span>
+            </div>
+            <div class="w-48 h-44 justify-center p-5">
+                <img src="/Image/heart3.png" alt="">
+            </div>
+            <div>
+                <p class="font-bold text-5xl p-5 text-pink-800">Crush Name</p>
+                <span class="px-8 "><input name="Crush Name" id="crushName"
+                        class="p-2 rounded-lg text-center font-bold text-lg tracking-wider"></span>
+            </div>
         </div>
+        <!--Button-->
+        <div class="flex justify-center pt-9">
+            <button
+                class="font-bold tracking-wider text-4xl bg-pink-800 text-white rounded-lg hover:bg-pink-400 p-2 cursor-pointer"
+                onclick="calculateLove()">Calculate Love</button>
+        </div>
+        <h1 id="display" class="pt-16 font-extrabold text-pink-800 text-3xl text-center p-4"></h1>
+        <br>
+        <br>
+        <br>
+        <hr class="bg-pink-200 h-1 ">
     </div>
-    <!--Section 2-->
-    <div class="pt-12 flex justify-center">
-        <div>
-            <p class="font-bold text-4xl p-4 text-pink-800">Your Name</p>
-            <span class="px-4"><input name="Your Name" id="meName"></span>
-        </div>
-        <div class="w-40 justify-center p-5">
-            <img src="/Image/heart3.png" alt="">
-        </div>
-        <div>
-            <p class="font-bold text-4xl p-4 text-pink-800">Crush Name</p>
-            <span class="px-5 "><input name="Crush Name" id="crushName"></span>
-        </div>
-    </div>
-    <!--Button-->
-    <div class="flex justify-center pt-9">
-        <button class="font-bold tracking-wider text-4xl bg-pink-800 text-white rounded-lg hover:bg-pink-400 p-2 cursor-pointer">Calculate Love</button>
-    </div>
-    <h1></h1>
-    <br>
-    <hr class="bg-pink-900">
+    <img src=" alt=" class="background">
+    <!--Java Script-->
     <script>
-        const firstName = geteleme
+        function calculateLove() {
+            const firstName = document.getElementById("meName").value;
+            const crushName = document.getElementById("crushName").value;
+            const Display = document.getElementById("display");
+            var loveScore = Math.floor((Math.random() * 100) + 1);
+            // console.log(loveScore);
+            Display.innerHTML = firstName + " and " + crushName + " Your Love Score is  " + loveScore + "%";
+        }
     </script>
 </body>
+
 </html>
