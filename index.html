@@ -7,14 +7,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 <style>
+    .name {
+        font-family: 'Playfair Display', serif;
+    }
+
     .background {
         background-image: url(/Image/wallpaper.jpg);
         background-repeat: no-repeat;
         background-size: 1300px;
         object-fit: contain;
         background-attachment: fixed;
-        height: 1600px;
+        height: 300px;
         width: 1200;
         background-position-x: center;
         backface-visibility: hidden;
@@ -35,19 +42,21 @@
             </div>
         </div>
         <!--Section 2-->
-        <div class="pt-12 flex justify-center">
-            <div>
-                <p class="font-bold text-5xl p-5 text-pink-800">Your Name</p>
-                <span class="px-6"><input name="Your Name" id="meName"
-                        class="p-2 rounded-lg text-center font-bold text-lg tracking-wider" required></span>
-            </div>
-            <div class="w-48 h-44 justify-center p-5">
-                <img src="/Image/heart3.png" alt="">
-            </div>
-            <div>
-                <p class="font-bold text-5xl p-5 text-pink-800">Crush Name</p>
-                <span class="px-8 "><input name="Crush Name" id="crushName"
-                        class="p-2 rounded-lg text-center font-bold text-lg tracking-wider"></span>
+        <div class="name">
+            <div class=" pt-12 flex justify-center ">
+                <div>
+                    <p class="font-bold text-5xl p-5 text-pink-800">Your Name</p>
+                    <span class="px-6"><input name="Your Name" id="meName"
+                            class="p-2 rounded-lg text-center font-bold text-lg tracking-wider" required></span>
+                </div>
+                <div class="w-48 h-44 justify-center p-5">
+                    <img src="/Image/heart3.png" alt="">
+                </div>
+                <div>
+                    <p class="font-bold text-5xl p-5 text-pink-800">Crush Name</p>
+                    <span class="px-8 "><input name="Crush Name" id="crushName"
+                            class="p-2 rounded-lg text-center font-bold text-lg tracking-wider"></span>
+                </div>
             </div>
         </div>
         <!--Button-->
@@ -62,22 +71,73 @@
         <br>
         <hr class="bg-pink-200 h-1 ">
     </div>
-    
+
     <!--Section-3-->
-    <p class="pt-10 px-5 text-2xl text-white font-normal tracking-wider italic">Love is the highest expression of world. Divine love translates into love of all. Love is expressed by human beings for each other. Parents love their children. Next to God there is none other like father or like mother, it is said. Parents love their children without any expectation.</p>
+    <p class="pt-10 px-5 text-2xl text-white font-normal tracking-wider italic">Love is the highest expression of world.
+        Divine love translates into love of all. Love is expressed by human beings for each other. Parents love their
+        children. Next to God there is none other like father or like mother, it is said. Parents love their children
+        without any expectation.</p>
     <br>
     <br>
-    <p class="pt-10 px-5 text-2xl text-purple-400 decoration-2 shadow-black font-semibold tracking-wider italic">Love brings about peace, harmony and joy between individuals. Love is a positive and healthy attitude. When love governs an interaction or a relationship there is no place for negative qualities such as jealousy, greed, violence and anger.</p>
+    <p class="pt-10 px-5 text-2xl text-purple-400 decoration-2 shadow-black font-semibold tracking-wider italic">Love
+        brings about peace, harmony and joy between individuals. Love is a positive and healthy attitude. When love
+        governs an interaction or a relationship there is no place for negative qualities such as jealousy, greed,
+        violence and anger.</p>
     <br>
     <br>
-    <p class="pt-10 px-5 text-2xl text-white font-normal tracking-wider italic">“You know you're in love when you can't fall asleep because reality is finally better than your dreams.”</p>
-    <img  class="background">
+    <p class="pt-10 px-5 text-2xl text-white font-normal tracking-wider italic">“You know you're in love when you can't
+        fall asleep because reality is finally better than your dreams.”</p>
+    <img class="background">
+    <!--Footer-->
+    <footer class="bg-purple-900 ">
+        <div class="flex">
+            <div class="w-80 flex justify-end pt-3 px-4">
+                <img src="Image/couple3.jpg" alt="">
+                <!-- <h1 class="">hell footer everyone</h1> -->
+
+            </div>
+            <div class="px-12  pt-11  font-serif">
+                <h1>We create free online calculators and converters for education and fun. Calculate, convert and count
+                    with the help of our calculators!
+                    <br>
+                    <br>
+                   
+                    <span class="font-bold">PURECALCULATORS</span>
+                    <br>
+                    <br>
+                    Biology Calculators
+                    <br>
+                    Chemistry Calculators
+                    <br>
+                    Construction Calculators
+                    <br>
+                    Converters And Conversion
+                    <br>
+                    Financial Calculators
+                    <br>
+                    Nutrition Calculators
+                    Health Calculators
+                </h1>
+
+
+
+            </div>
+        </div>
+
+        <div class="footer-rights tracking-wider text-center p-2 ">
+            Made with ❤️ by Arya | ©2023 All rights reserved
+        </div>
+    </footer>
     <!--Java Script-->
     <script>
         function calculateLove() {
             const firstName = document.getElementById("meName").value;
             const crushName = document.getElementById("crushName").value;
             const Display = document.getElementById("display");
+            if (!firstName || !crushName) {
+                Display.innerHTML = "Kindly provide your crush name!"
+                return;
+            }
             var loveScore = Math.floor((Math.random() * 100) + 1);
             // console.log(loveScore);
             Display.innerHTML = firstName + " and " + crushName + " Your Love Score is  " + loveScore + "%";
